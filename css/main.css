@@ -1,14 +1,17 @@
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script|Kaushan+Script&display=swap');
 *{
   margin: 0;
   padding: 0;
+  -ms-overflow-style: none;
 }
 body{
   min-width: 1000px;
 }
 .main-container{
-  height: 100vh;
+  height: 100vh;  
 }
 #landing-page{
+  overflow: hidden;
   background-image: url(../images/bg.jpg);
   background-size:100vh ;
   background-size: cover;
@@ -26,11 +29,15 @@ body{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: rgb(29, 27, 27); 
+  background-color: rgba(255, 174, 0,0.09); 
   transition: all 1s ;
   color: whitesmoke;
   border: whitesmoke solid .3em ;
-  
+}
+#hone{
+  font-size:15em;
+  font-weight: 200;
+  font-family: 'Kaushan Script', cursive;
 }
 .inner:hover{
   height:85vh;
@@ -43,25 +50,55 @@ body{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color:rgba(255, 255, 255, .3); 
-  border: rgb(49, 49, 49) solid .3em ;
-  color:  rgb(59, 53, 53);
+  background-color:rgba(29, 27, 27,0.5); 
+  border: whitesmoke solid .3em ;
+  color: rgba(255, 174, 0,0.8);
 }
 /* Start of Page 2 */
 #container-2{
   margin: 0;
   padding: 0;
-  background-color: rgb(29, 27, 27);
   display: grid;
+  overflow: hidden;
   grid-template-columns:25vw auto;
 }
 #g1{
+  position: relative;
   background-image: url(../images/bg1.jpg);
   background-repeat:no-repeat;
   background-size: cover;
-  background-position: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  overflow: hidden;
+  transition:1s;
+}
+.course{
+  overflow: hidden;
+  position: absolute;
+  background-color: rgba(135,226,16,0.9);
+  box-sizing: border-box;
+  height: 18vh;
+  width: 20vw;
+  font-size: 245%;
+  font-weight: 700;
+  color: whitesmoke;
+  display: flex;
+  justify-content:center ;
+  align-items: center;
+  text-align: center;
+  box-shadow: 8px 8px 10px 1px rgba(0,0,0,0.9) ;
+}
+#g1::before{
+  content: '';
+  position: absolute;
+  height: 100vh;
+  width:25vw;
+  background-color:rgba(0,0,0,0.2);
 }
 #g2{
+  background-image: url(../images/bg2.jpg);
   position: relative;
   display: flex;
   flex-wrap: wrap;
@@ -182,7 +219,18 @@ body{
 }
 /* End of Page 2 */
 .info{
-  height: 100vh;
+  position: relative;
+  height: 100vh; 
+  background-image: url(../images/feedback.jpg);
+  background-size: cover;
+  background-position-y: 70%;
+}
+.info::before{
+  content: '';
+  position: absolute;
+  height:100vh;
+  width: 100%;
+  background-color:rgba(29, 27, 27,0.09);
 }
 .addr{
   height:30vh;
